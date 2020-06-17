@@ -1,12 +1,18 @@
-<template lang="pug">
-.wrapper
-  wysiwyg(v-model="msg")
-</template>
+Vue.use(window.vueWysiwyg.default, {
+  hideModules: {
+    bold: false,
+  },
+  locale: 'en'
+});
 
-<script>
-export default {
-  name: 'app',
-  data () {
+new Vue({
+  el: "#app",
+  template: `
+    <div class="wrapper">
+      <wysiwyg v-model="msg"></wysiwyg>
+    </div>
+  `,
+  data() {
     return {
       msg: `<p>Welcome to <b>vue-wysiwyg</b>!</p>
       <p>
@@ -48,37 +54,4 @@ export default {
       `
     }
   }
-}
-</script>
-
-<style>
-* {
-  margin:0;
-  padding: 0;
-  box-sizing: border-box;
-}
-.wrapper {
-  max-width: 800px;
-  margin: 10em auto;
-}
-
-#app {
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
-
-body {
-  font-family: -apple-system,
-                BlinkMacSystemFont,
-                "Segoe UI",
-                Roboto,
-                Oxygen-Sans,
-                Ubuntu,
-                Cantarell,
-                "Helvetica Neue",
-                sans-serif;
-}
-</style>
+});

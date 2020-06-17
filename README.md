@@ -1,8 +1,6 @@
 [![](https://user-images.githubusercontent.com/11352152/30252159-1bbb9cfe-963b-11e7-966c-b44116c74a86.png)](https://chmln.github.io/vue-wysiwyg/)
 
-
 ## Usage
-
 
 ### Install vue-wysiwyg
 
@@ -93,3 +91,11 @@ Available Locales:
 Note on the image upload API endpoint:
 - Image is uploaded by `multipart/form-data`
 - Your endpoint must respond back with a string, the URL for the image - e.g. `http://myapp.com/images/12345.jpg`
+
+## Development
+
+1. Start webpack server: `yarn start`
+
+## Build
+
+1. `yarn build`
