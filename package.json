@@ -1,5 +1,5 @@
 {
-  "name": "vue-wysiwyg-fixed",
+  "name": "@gbl/vue-wysiwyg",
   "version": "1.9.1",
   "description": "A WYSIWYG HTML editor for Vue.js",
   "keywords": [
@@ -10,7 +10,7 @@
     "editor",
     "localization"
   ],
-  "author": "Gregory <gregory.mkv@gmail.com>",
+  "author": "John Rake <john@gorillabotlabs.com>",
   "license": "MIT",
   "main": "dist/vueWysiwyg.js",
   "style": "dist/vueWysiwyg.css",
@@ -64,7 +64,7 @@
     "webpack-merge": "^4.1.1"
   },
   "engines": {
-    "node": ">= 4.0.0",
-    "npm": ">= 3.0.0"
+    "node": ">= 12.16.1",
+    "npm": ">= 6.13.4"
   }
 }
