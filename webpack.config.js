@@ -1,6 +1,7 @@
 var path = require('path')
 
 const VueLoaderPlugin = require('vue-loader/lib/plugin')
+const TerserPlugin = require('terser-webpack-plugin');
 const isProd = process.env.NODE_ENV === "production"
 
 module.exports = {
@@ -44,5 +45,9 @@ module.exports = {
   plugins: [
     // make sure to include the plugin!
     new VueLoaderPlugin()
-  ]
+  ],
+  optimization: {
+    minimize: true,
+    minimizer: [new TerserPlugin()],
+  },
 }
